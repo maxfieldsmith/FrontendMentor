@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  width: 80%;
+  margin: 10% auto;
+  text-align: center;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 1em;
+}
+
+header {
+  background-color: rgb(115, 46, 158);
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+.header-img {
+  display: block;
+  max-width: 100%;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  opacity: 0.35;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  color: hsl(0, 0%, 100%);
+  font-size: 2.2em;
+  font-weight: 700;
+}
+
+.purp {
+  color: hsl(277, 64%, 61%);
+}
+
+.main-text {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.5;
+}
+
+.stat-grid {
+  margin-top: 40px;
+}
+
+.stat-header {
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+.stat {
+  font-size: 1.5em;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+
+  header {
+    order: 2;
+  }
+
+  .header-img {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+  }
+
+  main {
+    text-align: left;
+    margin: 0 60px;
+    padding-bottom: 0;
+  }
+
+  .main-text {
+    width: 90%;
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+.attribution a {
+  color: hsl(277, 64%, 61%);
+}
