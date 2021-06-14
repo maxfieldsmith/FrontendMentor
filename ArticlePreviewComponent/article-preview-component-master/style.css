@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-very-dark-gray-blue: hsl(217, 19%, 35%);
+  --clr-dark-blue: hsl(214, 17%, 51%);
+  --clr-gray-blue: hsl(212, 23%, 69%);
+  --clr-light-gray-blue: hsl(210, 46%, 95%);
+}
+
+html {
+  font-size: 13px;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  min-height: 100vh;
+  min-width: 100vw;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--clr-light-gray-blue);
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  width: 95%;
+  padding: 50px 20px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: 1fr 1.6fr;
+  border-radius: 1em;
+  box-shadow: 10px;
+  background-color: white;
+}
+
+.img-header {
+  background-image: url(./images/drawers.jpg);
+  height: 100%;
+  display: block;
+  border-radius: 1em 1em 0 0;
+  background-size: cover;
+}
+
+.info {
+  padding: 20px;
+}
+
+.info__header {
+  padding-bottom: 20px;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  grid-gap: 10px;
+}
+
+.profile__pic {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  position: relative;
+  margin: 5px;
+}
+
+.profile__info {
+  padding: 10px 0 0 0;
+}
+
+.name {
+  color: var(--clr-very-dark-blue);
+  display: block;
+  position: relative;
+}
+
+.date {
+  color: var(--clr-gray-blue);
+  position: relative;
+  display: block;
+}
+
+.share-btn {
+  display: flex;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: var(--clr-light-gray-blue);
+  transform: translateY(7px) translateX(7px);
+  cursor: pointer;
+}
+
+.share-btn img {
+  margin: auto;
+  height: 16px;
+  width: 16px;
+}
+
+.share-hidden {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-very-dark-gray-blue);
+  padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+  width: 100%;
+  color: var(--clr-light-gray-blue);
+  border-radius: 0 0 1em 1em;
+  display: none;
+}
+
+.share-hidden ul li {
+  display: inline-block;
+}
+
+.desktop-share {
+  position: absolute;
+  top: 267px;
+  right: 200px;
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-very-dark-gray-blue);
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 1em;
+  display: none;
+}
+
+.desktop-share ul li {
+  display: inline-block;
+}
+
+.desktop-share .share__name {
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: var(--clr-light-gray-blue);
+  flex: 40%;
+}
+
+.desktop-share .logos {
+  display: flex;
+  justify-content: space-between;
+  flex: 30%;
+}
+
+.desktop-share::after {
+  position: absolute;
+  content: "";
+  background: var(--dark-gray-blue);
+  top: 45px;
+  right: 105px;
+  height: 10px;
+  width: 10px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.show {
+  display: flex;
+  transition: all 1s ease-in;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: none;
+    grid-gap: 20px;
+    width: 680px;
+  }
+
+  .img-header {
+    background-image: url(https://github.com/lynnecodes/FM-articlepreviewcomponent/blob/master/images/drawers.jpg?raw=true);
+    background-size: cover;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .info {
+    padding: 20px;
+  }
+}
